@@ -10,15 +10,17 @@ $(document).ready(function() {
       .empty()
       .append(arrayOfClicks.length);
   });
-  $(".template-editor-tab").click(function() {
+  $(document).click(function() {
     var $containerElement = $(".CodeMirror-gutters");
+    var $backgroundContainer = $(".CodeMirror.cm-s-default ");
     var $smallContainerElement = $(".CodeMirror-lines div");
     var $containerElementHeight = $containerElement.height();
+    var $backgroundContainerHeight = $backgroundContainer.height();
     var $smallContainerElementHeight = $smallContainerElement.height();
     var $linesOfCode = ($containerElementHeight - 74) / 14;
     var $linesOfCodeSmall = $smallContainerElementHeight / 14;
 
-    if ($containerElementHeight > 258) {
+    if ($containerElementHeight > $backgroundContainerHeight) {
       $(".lines")
         .empty()
         .append($linesOfCode);
@@ -31,4 +33,7 @@ $(document).ready(function() {
   var $topBarBackground = $(".template-editor-titlebar");
   var $topBarActions = $(".template-editor-titlebar__actions");
   $topBarActions.append(innerDiv);
+  var $tabs = $(".template-editor-tab-filename");
+  var yas = "<span>YAS</span>";
+  $tabs.append(yas);
 });
