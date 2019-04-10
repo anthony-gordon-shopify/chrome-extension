@@ -1,0 +1,21 @@
+.shopify-tools-full-width {
+  padding-left: 0 !important;
+}
+.pink-background-color {
+  background-color: pink !important;
+}
+
+#coolButton {
+  padding: 10px 5px;
+  width: 20em;
+  background-color: pink;
+  border: 0;
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  border-radius: 0.3em;
+}
+
+#coolButton:hover {
+  cursor: pointer;
+}
