@@ -19,7 +19,6 @@ $(document).ready(function() {
     var $smallContainerElementHeight = $smallContainerElement.height();
     var $linesOfCode = ($containerElementHeight - 74) / 14;
     var $linesOfCodeSmall = $smallContainerElementHeight / 14;
-
     if ($containerElementHeight > $backgroundContainerHeight) {
       $(".lines")
         .empty()
@@ -33,7 +32,4 @@ $(document).ready(function() {
   var $topBarBackground = $(".template-editor-titlebar");
   var $topBarActions = $(".template-editor-titlebar__actions");
   $topBarActions.append(innerDiv);
-  var $tabs = $(".template-editor-tab-filename");
-  var yas = "<span>YAS</span>";
-  $tabs.append(yas);
 });

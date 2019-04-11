@@ -32,7 +32,11 @@
   "content_scripts": [
     {
       "matches": ["https://*.myshopify.com/admin/themes/*"],
-      "js": ["js/jquery/jquery.min.js", "src/inject/inject.js"],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js",
+        "src/inject/inject-tabs.js"
+      ],
       "css": ["src/inject/inject.css"]
     }
   ]
