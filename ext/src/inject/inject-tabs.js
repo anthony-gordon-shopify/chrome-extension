@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log("working on load");
   $(document).click(function() {
-    var $tabs = $(".template-editor-tab-filename");
+    var $tabs = $(".template-editor-tab.active .template-editor-tab-filename");
     var $yas = "<span class='yas-container'></span>";
     var $yasContainer = $(".yas-container");
     $yasContainer.remove();
