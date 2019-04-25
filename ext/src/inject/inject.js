@@ -19,14 +19,30 @@ $(document).ready(function() {
     var $smallContainerElementHeight = $smallContainerElement.height();
     var $linesOfCode = ($containerElementHeight - 74) / 14;
     var $linesOfCodeSmall = $smallContainerElementHeight / 14;
+
+    var $tabs = $(".template-editor-tab.active .template-editor-tab-filename");
+    var $yas = "<span class='yas-container'></span>";
+    var $yasContainer = $(".yas-container");
+    $yasContainer.remove();
+    $tabs.append($yas);
+    var $tabsInnnerContainer = $(".yas-container");
+    if ($containerElementHeight > $backgroundContainerHeight) {
+      var yasInner = " - " + $linesOfCode + " lines of code";
+    } else {
+      var yasInner = " - " + $linesOfCodeSmall + " lines of code";
+    }
+
+    $tabsInnnerContainer.empty().append(yasInner);
+    console.log("working on click");
+
     if ($containerElementHeight > $backgroundContainerHeight) {
       $(".lines")
         .empty()
-        .append($linesOfCode);
+        .append(" - " + $linesOfCode + " lines of code");
     } else {
       $(".lines")
         .empty()
-        .append($linesOfCodeSmall);
+        .append(" - " + $linesOfCodeSmall + " lines of code");
     }
   });
   var $topBarBackground = $(".template-editor-titlebar");
